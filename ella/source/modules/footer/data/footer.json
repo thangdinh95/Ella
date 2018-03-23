@@ -1,0 +1,34 @@
+{
+  "data": {
+    "shop": [
+      "New In",
+      "Women",
+      "Schuhe Shoes",
+      "Bags & Accessories",
+      "Men",
+      "Top Brands",
+      "Sale & Special Offers",
+      "Lookbook"
+    ],
+    "information": [
+      "About us",
+      "Customer Service",
+      "New Collection",
+      "Best Sellers",
+      "Manufacturers",
+      "Privacy policy",
+      "Terms & condition",
+      "Blog"
+    ],
+    "customer": [
+      "Search Terms",
+      "Advanced Search",
+      "Orders and Returns",
+      "Contact Us",
+      "RSS",
+      "Help & FAQs",
+      "Consultant",
+      "Store Locations"
+    ]
+  }
+}

@@ -6,6 +6,9 @@
       },{
         "title": "header",
         "url": "header"
+      },{
+        "title": "homepage",
+        "url": "index"
       }
     ]
   }

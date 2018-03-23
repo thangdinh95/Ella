@@ -1,0 +1,13 @@
+mixin button-white(title, long)
+  .button-white
+    button.btn.button-white__btn(class="button-white__btn--"+long) #{title}
+
+mixin button-black(title)
+  .button-black
+    button.btn.button-black__btn #{title}
+      span.button-black__caret
+        i.button-black__icon.fa.fa-caret-right
+
+mixin button-red(title)
+  .button-red
+    button.btn.button-red__btn #{title}

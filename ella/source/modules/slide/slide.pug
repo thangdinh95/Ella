@@ -1,0 +1,29 @@
+include ../button/button
+
+mixin slide
+  section.slide
+    .carousel.slide.my-carousel(data-ride="carousel")
+      .slide-inside.carousel-inner
+        .carousel-item.active
+          a(href="#!")
+            img.d-block.w-100(src="images/slideshow1.jpg")
+          .slide-text
+            p.slide-text__title LOREM A CASTRO
+            p.slide-text__describe Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an, tincidunt risus ac, consequat velit. Quisquemos sodales suscipit tortor ditaemcos
+            .slide-text__btn
+              +button-black('SHOP THE COLLECTION')
+        .carousel-item
+          a(href="#!")
+            img.d-block.w-100(src="images/slideshow2.jpg")
+        .carousel-item
+          a(href="#!")
+            img.d-block.w-100(src="images/slideshow3.jpg")
+          .slide-text.slide-text--left
+            p.slide-text__title LOREMOUS
+            p.slide-text__describe Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an, tincidunt risus ac, consequat velit. Quisquemos sodales suscipit tortor ditaemcos
+            .slide-text__btn
+              +button-black('SHOP THE COLLECTION')
+        a.carousel-control-prev.slide-control-prev(href=".my-carousel", role="button", data-slide="prev")
+          i.slide-control-prev__icon.fa.fa-angle-left
+        a.carousel-control-next.slide-control-next(href=".my-carousel", role="button", data-slide="next")
+          i.slide-control-next__icon.fa.fa-angle-right

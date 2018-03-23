@@ -1,0 +1,26 @@
+include ../button/button
+
+mixin product-block(state)
+  a.product-block(href="#!")
+    .product-picture
+      .product-picture__layout
+      .product-picture__state
+        | #{state}
+      img.product-picture__img(src="images/product.jpg", alt="product")
+      .product-picture__love
+        button.btn.product-picture__heart
+          i.fa.fa-heart
+      .product-picture__btn
+        +button-white("SELECT OPTIONS")
+      .product-picture__rate
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+      .product-picture__view QUICK VIEW
+    .product-body
+      .product-body__title Connection
+      .product-body__describe Raesent Scelerisque Dan Sedom Molestime Lorem
+      .product-body__oldprice &euro;298734
+        span.product-body__newprice &euro;982374

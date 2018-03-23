@@ -1,0 +1,136 @@
+include modules/head/head
+include modules/button/button
+include modules/slide/slide
+include modules/header/header
+include modules/footer/footer
+include modules/product-block/product-block
+include modules/banner-home/banner-home
+
+doctype html
+html
+  +head
+  body
+    +nav-mobile
+    .body-wrapper
+      .container.container-mobile-nav
+        +header
+      +nav
+      +slide
+      .container
+        section.banner-top
+          .row
+            .col-12.col-md-4
+              +banner-home("EDITOR'S PICK","top-banner1")
+            .col-12.col-md-4
+              +banner-home("SHOES","top-banner2","black")
+            .col-12.col-md-4
+              +banner-home("ACCESSORIES","top-banner3")
+        section.new-arrival
+          h1.main-title NEW ARRIVALS
+          .row
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-md-4.col-6.col
+              +product-block("-50%")
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-md-4.col-6.col
+              +product-block("SALE")
+            .col-12.text-center
+              +button-white("SHOW MORE", "long")
+      section.banner-body
+        .banner-body__wrapper
+          img(src="images/banner-body.jpg", alt="pic").banner-body__img
+          .banner-body__text
+            p.banner-body__title MILANCELOS
+            p.banner-body__describe Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an, tincidunt risus ac, consequat velit. Quisquemos sodales suscipit tortor ditaemcos condimentum lacus meleifend menean viverra auctor blanditos comodous.
+            .banner-body__btn
+              +button-black('SHOP THE COLLECTION')
+      .container
+        section.trending
+          h1.main-title TRENDING NOW
+          .owl-carousel.home-slider.js-trending
+            each item in [1, 2, 3, 4, 5, 6]
+              +product-block("SALE")
+        section.feature
+          h1.main-title #FEATURED ON ELLA
+          .row
+            .col-md-4
+              .feature-block
+                a(href="#!")
+                  img.feature-block__img(src="images/banner-home1.jpg", alt="")
+                .feature-block__body
+                  .feature-block__title LOREM ET DORUS
+                  .feature-block__describe Nullam aliquet vestibulum augue non varius. Cras nec congue elitos. Duis tristique del ante nec aliquam. Praesent urna tellus laoreet an tellus ullamcorper fermentum facilisis eratum.
+                  .feature-block__btn
+                    +button-black("SHOP NOW")
+            .col-md-4
+              .feature-block
+                a(href="#!")
+                  img.feature-block__img(src="images/banner-home2.jpg", alt="")
+                .feature-block__body
+                  .feature-block__title LOREM ET DORUS
+                  .feature-block__describe Nullam aliquet vestibulum augue non varius. Cras nec congue elitos. Duis tristique del ante nec aliquam. Praesent urna tellus laoreet an tellus ullamcorper fermentum facilisis eratum.
+                  .feature-block__btn
+                    +button-black("SHOP NOW")
+            .col-md-4
+              .feature-block
+                a(href="#!")
+                  img.feature-block__img(src="images/banner-home3.jpg", alt="")
+                .feature-block__body
+                  .feature-block__title LOREM ET DORUS
+                  .feature-block__describe Nullam aliquet vestibulum augue non varius. Cras nec congue elitos. Duis tristique del ante nec aliquam. Praesent urna tellus laoreet an tellus ullamcorper fermentum facilisis eratum.
+                  .feature-block__btn
+                    +button-black("SHOP NOW")
+      section.brand
+        .container
+          .owl-carousel.home-slider-brand.js-brand.text-center
+              each item in [1, 2, 3, 4, 5]
+                a(href="#!")
+                  img.brand__img(src="images/brand3.png", alt="")
+                a(href="#!")
+                  img.brand__img(src="images/brand4.png", alt="")
+                a(href="#!")
+                  img.brand__img(src="images/brand2.png", alt="")
+                a(href="#!")
+                  img.brand__img(src="images/brand5.png", alt="")
+                a(href="#!")
+                  img.brand__img(src="images/brand1.png", alt="")
+      section.instagram
+        h1.title #ELLA ON INSTAGRAM
+        .container
+          h5.instagram__describe
+            span
+              i.fa.fa-instagram.instagram__icon
+            | Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom.
+          .owl-carousel.home-slider.js-instagram
+            each item in [1, 2, 3, 4, 5]
+              a(href="#!").col-100
+                img.instagram__img(src="images/ins5.jpg", alt="")
+              a(href="#!").col-100
+                img.instagram__img(src="images/ins4.jpg", alt="")
+              a(href="#!").col-100
+                img.instagram__img(src="images/ins3.jpg", alt="")
+              a(href="#!").col-100
+                img.instagram__img(src="images/ins2.jpg", alt="")
+              a(href="#!").col-100
+                img.instagram__img(src="images/ins1.jpg", alt="")
+              a(href="#!").col-100
+                img.instagram__img(src="images/ins5.jpg", alt="")
+          .col-12
+            .instagram__btn
+              +button-black("VIEW GALLERY")
+      +footer(data)
+    script(src="js/main.js")

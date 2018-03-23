@@ -1,0 +1,62 @@
+.button-white {
+  &__btn{
+    border: 2px solid $color_black;
+    color: $color_black;
+    background-color: $color_white;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.4s;
+    &:hover {
+      background-color: $color_black;
+      color: $color_white;
+    }
+    &--long {
+      padding: 8px 120px;
+      @include respond-to ('smallphone-and-down') {
+        padding: 8px 90px;
+      }
+    }
+  }
+}
+.button-black {
+  &__btn {
+    border: 2px solid $color_black;
+    color: $color_white;
+    background-color: $color_black;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 7px 30px;
+    transition: 0.4s;
+    &:hover {
+      background-color: $color_white;
+      color: $color_black;
+      border: 2px solid $color_black;
+    }
+  }
+  &__caret {
+    margin-left: 10px;
+    position: relative;
+  }
+  &__icon {
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+  }
+}
+.button-red {
+  &__btn {
+    border: 2px solid $color_red;
+    color: $color_white;
+    background-color: $color_red;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 7px 30px;
+    transition: 0.4s;
+    &:hover {
+      background-color: $color_white;
+      color: $color_red;
+      border: 2px solid $color_red;
+    }
+  }
+}

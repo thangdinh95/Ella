@@ -1,0 +1,499 @@
+include ../button/button
+
+mixin header
+  header.header
+    .header-mobile
+      .header-mobile__menu
+        button.btn.header-mobile__btn.js-mobile-menu
+          span
+            i.fa.fa-bars
+      .header-mobile__customer
+        button.btn.header-mobile__btn.header-mobile__dropdowntoggle.dropdown-toggle#dropdownMenuUserButton(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+          i.fa.fa-user
+        .dropdown-menu.header-mobile__dropdownmenu(aria-labelledby="dropdownMenuUserButton")
+          a.dropdown-item(href="#!") Sign In or Creat an account
+          a.dropdown-item(href="#!") My Account
+          a.dropdown-item(href="#!") My Wishlist
+    .header-top
+      .header-call
+        p.header-call__text Order online or call us (1800) 000 8808
+      .header-lang
+        .dropdown.header-lang__dropdown
+          button.btn.dropdown-toggle.header-lang__dropdowntoggle.header-lang__dropdowntoggle--flag#dropdownMenuButton(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Eng
+          .dropdown-menu.header-lang__dropdownmenu(aria-labelledby="dropdownMenuButton")
+            a.dropdown-item(href="#!") ENG
+            a.dropdown-item(href="#!") GER
+      .header-currency
+        .dropdown.header-currency__dropdown.header-currency__dropdown--currency
+          button.btn.dropdown-toggle.header-currency__dropdowntoggle#dropdownMenuPrice(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") USD
+          .dropdown-menu.header-currency__dropdownmenu(aria-labelledby="dropdownMenuPrice")
+            a.dropdown-item(href="#!") VND
+            a.dropdown-item(href="#!") JPY
+      .header-search
+        .input-group.header-search__input
+          input.form-control.header-search__form(type="text", placeholder="search")
+          .input-group-append
+            button.btn.header-search__btn(type="button")
+              i.fa.fa-search
+
+    .header-panel
+      .header-logo
+        img.header-logo__img(src="images/logo.png", alt="logo")
+      .header-attributes
+        .header-ship FREE SHIPPING ON ALL ORDERS. NO MINIMUM PURCHASE.
+        .header-customer
+          .header-cart
+            i.header-cart__icon.fa.fa-shopping-bag
+            span.header-cart__wrapper
+              a.header-cart__link.header-cart__link--hidden(href="#!") Shopping Cart
+              span.header-cart__noti 0
+              .header-cart__hover
+                p Your cart is currently empty.
+                +button-white('CONTINUE SHOPPING')
+          .header-wishlist
+            i.header-wishlist__icon.fa.fa-heart
+            a.header-wishlist__link(href="#!") My Whistlist
+          .header-signin
+            a.header-signin__link(href="#!") Sign In
+            span or
+            a.header-signin__link(href="#!") Create an account
+        .header-search-mobile
+          .header-search-mobile__wrapper.input-group
+            input.form-control.header-search-mobile__form(type="text", placeholder="search")
+            .input-group-append
+              button.btn.header-search-mobile__btn(type="button")
+                i.fa.fa-search
+mixin nav
+  nav.navbar.navigation.navbar-expand-xl
+    .container
+
+        ul.navbar-nav.navigation-nav.mr-auto
+          li.nav-item.navigation-nav__item.active
+            a.nav-link.navigation-nav__link(href="#!")
+              span.navigation-nav__text HOME
+          li.nav-item.navigation-nav__item.navigation-nav__item--state
+            a.nav-link.navigation-nav__link(href="#!")
+              span.navigation-nav__text COLLECTION
+              span.navigation-nav__icon
+                i.fa.fa-caret-down
+              .navigation-nav__state1
+                .navigation-nav__new NEW
+            .navigation-hover
+              .container
+                .row
+                  .col-sm-7
+                    .row
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link
+                              span Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                  .col-sm-5
+                    .row
+                      .col-sm-6.text-center
+                        h5.navigation-hover__title LOREM ET DORUS
+                        a(href="#!")
+                          img.navigation-hover__img(src="images/product.jpg", alt="")
+                        p.navigation-hover__describe Celerisque Dan Sedom Molestime Lorem
+                        p.navigation-hover__describe
+                          b €72.08
+                      .col-sm-6
+                        a(href="#!")
+                          img.navigation-hover__img(src="images/dropdown_3.jpg", alt="")
+          li.nav-item.navigation-nav__item
+            a.nav-link.navigation-nav__link(href="#!")
+              span.navigation-nav__text SHOP
+              span.navigation-nav__icon
+                i.fa.fa-caret-down
+            .navigation-hover
+              .container
+                .row
+                  .col-sm-7
+                    .row
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link
+                              span Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                  .col-sm-5
+                    .row
+                      .col-sm-6
+                        a(href="#!")
+                          img.navigation-hover__img(src="images/dropdown_1.jpg", alt="")
+                        a(href="#!")
+                          img.navigation-hover__img(src="images/dropdown_4.jpg", alt="")
+                      .col-sm-6
+                        a(href="#!")
+                          img.navigation-hover__img.navigation-hover__img--ml(src="images/dropdown_2.jpg", alt="")
+          li.nav-item.navigation-nav__item
+            a.nav-link.navigation-nav__link(href="#!")
+              span.navigation-nav__text LOOKBOOK
+              span.navigation-nav__icon
+                i.fa.fa-caret-down
+            .navigation-hover
+              .container
+                .row
+                  .col-sm-4.col
+                    h5.navigation-hover__title LOREM ET DORUS
+                    a(href="#!")
+                      img.navigation-hover__img(src="images/dropdown5.jpg", alt="")
+                    ul.navigation-hover__nav
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                  .col-sm-4.col
+                    h5.navigation-hover__title LOREM ET DORUS
+                    a(href="#!")
+                      img.navigation-hover__img(src="images/dropdown5.jpg", alt="")
+                    ul.navigation-hover__nav
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                  .col-sm-4.col
+                    h5.navigation-hover__title LOREM ET DORUS
+                    a(href="#!")
+                      img.navigation-hover__img(src="images/dropdown5.jpg", alt="")
+                    ul.navigation-hover__nav
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                  .col-sm-4.col
+                    h5.navigation-hover__title LOREM ET DORUS
+                    a(href="#!")
+                      img.navigation-hover__img(src="images/dropdown5.jpg", alt="")
+                    ul.navigation-hover__nav
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                  .col-sm-4.col
+                    h5.navigation-hover__title LOREM ET DORUS
+                    a(href="#!")
+                      img.navigation-hover__img(src="images/dropdown5.jpg", alt="")
+                    ul.navigation-hover__nav
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+                      li.navigation-hover__item
+                        a(href="#!").navigation-hover__link Maecenas
+          li.nav-item.navigation-nav__item
+            a.nav-link.navigation-nav__link(href="#!")
+              span.navigation-nav__text BLOG
+              span.navigation-nav__icon
+                i.fa.fa-caret-down
+            .navigation-hover
+              .container
+                .row
+                  .col-sm-4
+                    a(href="#!")
+                      img.navigation-hover__img(src="images/dropdown.jpg", alt="")
+                  .col-sm-8
+                    .row.navigation-hover__left
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link
+                              span Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                      .col-sm-4
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                        h5.navigation-hover__title LOREM ET DORUS
+                        ul.navigation-hover__nav
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+                          li.navigation-hover__item
+                            a(href="#!").navigation-hover__link Maecenas
+          li.nav-item.navigation-nav__item
+            a.nav-link.navigation-nav__link(href="#!")
+              span.navigation-nav__text FAQS
+          li.nav-item.navigation-nav__item
+            a.nav-link.navigation-nav__link(href="#!")
+              span.navigation-nav__text ABOUT US
+          li.nav-item.navigation-nav__item
+            a.nav-link.navigation-nav__link(href="#!")
+              span.navigation-nav__text CONTACT US
+        span.navbar-text
+          a.nav-link.navigation-nav__link(href="#!")
+            span.navigation-nav__text.navigation-nav__text--dot EXPRESS ORDER DEMO
+            .navigation-nav__state2
+                .navigation-nav__new NEW
+mixin nav-mobile
+  nav.nav-mobile
+    ul.navbar-nav.navmobile-nav
+      li.nav-item.navmobile-nav__item
+        button.btn.navmobile-nav__btn.js-button-x X
+      li.nav-item.navmobile-nav__item
+        a.nav-link.navmobile-nav__link(href="#!") HOME
+      li.nav-item.navmobile-nav__item.js-collection
+        a.nav-link.navmobile-nav__link(href="#!") COLLECTION
+          span.navmobile-nav__icon
+            i.fa.fa-caret-down
+      ul.navmobile-toggle.navmobile-collection
+        li.navmobile-toggle__item.js-subtoggle-item
+          a.navmobile-toggle__link(href="#!") LOREM ET DORUS
+          ul.navmobile-subtoggle.js-subtoggle
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+        li.navmobile-toggle__item.js-subtoggle-item
+          a.navmobile-toggle__link(href="#!") LOREM DORUS
+          ul.navmobile-subtoggle.js-subtoggle
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+        li.navmobile-toggle__item.js-subtoggle-item
+          a.navmobile-toggle__link(href="#!") DORUS ET LOREM
+          ul.navmobile-subtoggle.js-subtoggle
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+        li.navmobile-toggle__item.js-subtoggle-item
+          a.navmobile-toggle__link(href="#!") ET LOREM DORUS
+          ul.navmobile-subtoggle.js-subtoggle
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+        li.navmobile-toggle__item.js-subtoggle-item
+          a.navmobile-toggle__link(href="#!") LOREM ET DORUS
+          ul.navmobile-subtoggle.js-subtoggle
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+            li.navmobile-subtoggle__item
+              a.navmobile-subtoggle__link(href="#!") AAAAAA
+        img.navmobile-toggle__img(src="images/dropdown_1.jpg", alt="")
+        img.navmobile-toggle__img(src="images/dropdown_4.jpg", alt="")
+        img.navmobile-toggle__img(src="images/dropdown_2.jpg", alt="")
+      li.nav-item.navmobile-nav__item.js-shop
+        a.nav-link.navmobile-nav__link(href="#!") SHOP
+          span.navmobile-nav__icon
+            i.fa.fa-caret-down
+      li.nav-item.navmobile-nav__item.js-lookbook
+        a.nav-link.navmobile-nav__link(href="#!") LOOKBOOK
+          span.navmobile-nav__icon
+            i.fa.fa-caret-down
+      li.nav-item.navmobile-nav__item.js-blog
+        a.nav-link.navmobile-nav__link(href="#!") BLOG
+          span.navmobile-nav__icon
+            i.fa.fa-caret-down
+      li.nav-item.navmobile-nav__item
+        a.nav-link.navmobile-nav__link(href="#!") FAQS
+      li.nav-item.navmobile-nav__item
+        a.nav-link.navmobile-nav__link(href="#!") ABOUT US
+      li.nav-item.navmobile-nav__item
+        a.nav-link.navmobile-nav__link(href="#!") CONTACT US
+      li.nav-item.navmobile-nav__item
+        a.nav-link.navmobile-nav__link(href="#!") EXPRESS ORDER DEMO

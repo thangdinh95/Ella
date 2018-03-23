@@ -1,0 +1,73 @@
+mixin footer(data)
+  footer.footer
+    .container
+      .footer-top
+        .row
+          .col-md-6
+            .row
+              .col-md-4.col-6
+                h5.footer-title SHOPS
+                ul.footer-tab
+                  each item in data.shop
+                    li.footer-tab__item
+                      a.footer-tab__link(href="#!")
+                        | #{item}
+              .col-md-4.col-6
+                h5.footer-title INFORMATION
+                ul.footer-tab
+                  each item in data.information
+                    li.footer-tab__item
+                      a.footer-tab__link(href="#!")
+                        | #{item}
+              .col-md-4.col-6
+                h5.footer-title SHOPS
+                ul.footer-tab
+                  each item in data.customer
+                    li.footer-tab__item
+                      a.footer-tab__link(href="#!")
+                        | #{item}
+          .col-md-6
+            .footer-connection
+              h5.footer-title STAY CONNECTED
+              ul.footer-sns
+                li.footer-sns__item
+                  a.footer-sns__link
+                    i.fa.fa-facebook
+                li.footer-sns__item
+                  a.footer-sns__link
+                    i.fa.fa-twitter
+                li.footer-sns__item
+                  a.footer-sns__link
+                    i.fa.fa-google-plus
+                li.footer-sns__item
+                  a.footer-sns__link
+                    i.fa.fa-instagram
+                li.footer-sns__item
+                  a.footer-sns__link
+                    i.fa.fa-pinterest
+              .footer-facebook
+                .footer-facebook__title Like US on FACEBOOK
+                button.btn.footer-facebook__btn
+                  span
+                    i.fa.fa-thumbs-up
+                  | Like 9.6K
+                button.btn.footer-facebook__btn Share
+            .footer-newsletter
+              h5.footer-title NEWSLETTER SIGN UP
+              .input-group.footer-newsletter__title
+                input.form-control.footer-newsletter__form(type="text", placeholder="enter your email address")
+                .input-group-append.footer-newsletter__append
+                  button.btn.footer-newsletter__btn(type="button") SUBCRIBE
+      .footer-bottom
+        .row
+          .col-lg-6.col-md-8.col-12
+            p.footer-bottom__text &copy; 2017 ELLA Fashion Store Shopify. All Rights Reserved. Ecommerce Software by Shopify.
+              span
+                a.footer-bottom__link(href="#!") Shopify Themes & Templates
+              | by
+              span
+                a.footer-bottom__link(href="#!") HaloThemes.com
+            a(href="#!").footer-bottom__icon.icon4
+            a(href="#!").footer-bottom__icon.icon2
+            a(href="#!").footer-bottom__icon.icon1
+            a(href="#!").footer-bottom__icon.icon3

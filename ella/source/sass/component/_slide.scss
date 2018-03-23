@@ -1,0 +1,79 @@
+.slide-control-prev,
+.slide-control-next {
+  &__icon {
+    font-size: 65px;
+    color: $color_grey;
+    display: none;
+  }
+}
+.slide {
+  &:hover {
+    .slide-control-prev__icon,
+    .slide-control-next__icon {
+      display: block;
+      @include respond-to ('smallphone-and-down') {
+        display: none;
+      }
+    }
+  }
+}
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 500px;
+  @include respond-to ('smallphone-and-down') {
+    width: 220px;
+  }
+  &--left {
+    left: 30%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    @include respond-to ('smallphone-and-down') {
+      transform: translate(-85%, -50%);
+    }
+    @include respond-to ('tablet-and-down') {
+      left: 50%;
+    }
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 0;
+    @include respond-to ('smallphone-and-down') {
+      font-size: 20px;
+      border: 2px solid $color_black;
+      background-color: $color_white;
+      padding: 7px 0;
+    }
+    &::before {
+      content:"";
+      position: absolute;
+      height: 2px;
+      width: 60px;
+      background-color: $color_black;
+      top:65px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include respond-to ('smallphone-and-down') {
+        display: none;
+      }
+    }
+  }
+  &__describe {
+    font-size: 12px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    @include respond-to ('smallphone-and-down') {
+      display: none;
+    }
+  }
+  &__btn {
+    @include respond-to ('smallphone-and-down') {
+      display: none;
+    }
+  }
+}

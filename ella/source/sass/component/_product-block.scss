@@ -1,0 +1,120 @@
+.product-block {
+  text-align: center;
+  transition: 0.4s;
+  &:hover {
+    .product-picture{
+      &__love,
+      &__btn,
+      &__rate,
+      &__layout,
+      &__view {
+        display: block;
+        transition: 0.4s;
+        @include respond-to ('smallphone-and-down') {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.product-picture{
+  position: relative;
+  &__state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid $color_red;
+    color: $color_red;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    z-index: 10;
+  }
+  &__img {
+    width: 100%;
+    z-index: 4;
+  }
+  &__layout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color_whiteblur;
+    z-index: 5;
+    transition: 0.4s;
+  }
+  &__love {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    transition: 0.4s;
+  }
+  &__heart {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: $color_pink;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__btn {
+    display: none;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    transition: 0.4s;
+  }
+  &__rate {
+    display: none;
+    position: absolute;
+    top: 175px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    z-index: 6;
+    transition: 0.4s;
+  }
+  &__view {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $color_black;
+    color: $color_white;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 0;
+    z-index: 6;
+    transition: 1s;
+  }
+}
+.product-body {
+  font-size: 12px;
+  padding: 20px 0;
+  &__title {
+    color: $color_grey;
+  }
+  &__describe {
+    padding: 5px 0;
+  }
+  &__oldprice {
+    text-decoration: line-through;
+    color: $color_grey;
+  }
+  &__newprice {
+    color: $color_red;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+  }
+}

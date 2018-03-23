@@ -1,0 +1,173 @@
+.footer {
+  background-color: $color_black;
+  @include respond-to ('smallphone-and-down') {
+    padding: 0 15px;
+  }
+}
+.footer-top {
+  padding: 30px 0;
+  border-bottom: 1px solid $color_grey2;
+}
+.footer-title {
+  color: $color_white;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer-tab {
+  color: $color_grey;
+  font-size: 11px;
+  margin-bottom: 20px;
+  &__item {
+    padding: 3px 0;
+  }
+  &__link {
+    &:hover {
+      color: $color_white;
+      border-bottom: 1px solid $color_white;
+      transition: 0.4s;
+    }
+  }
+}
+.footer-sns {
+  &__item {
+    width: 35px;
+    height: 35px;
+    background-color: $color_white;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 35px;
+    float: left;
+    margin-right: 10px;
+    transition: 0.4s;
+    &:hover {
+      color:  $color_white;
+      background-color: $color_black;
+      border: 1px solid $color_white;
+      cursor: pointer;
+    }
+  }
+  &__link {
+
+  }
+}
+.footer-facebook {
+  margin-top: -5px;
+  @include respond-to ('smallphone-and-down') {
+    clear: both;
+    padding-top: 30px;
+  }
+  &__title {
+    color: $color_white;
+    font-size: 12px;
+  }
+  &__btn {
+    font-size: 12px;
+    padding: 0 7px;
+    background-color: $color_blue;
+    color: $color_white;
+  }
+}
+.footer-newsletter {
+  clear: both;
+  margin-top: 50px;
+  padding-right: 70px;
+  @include respond-to ('tablet-and-down') {
+    padding-right:10px;
+  }
+  @include respond-to ('smallphone-and-down') {
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  &__title {
+
+  }
+  &__form {
+    border-radius: 0;
+    border: 1px solid $color_grey2;
+    background-color: transparent;
+    &::placeholder {
+      font-size: 12px;
+    }
+    &:focus {
+      background-color: transparent;
+    }
+  }
+  &__append {
+    margin-left: 5px;
+  }
+  &__btn {
+    border-radius: 0;
+    font-size: 12px;
+    color: $color_white;
+    background-color: $color_grey2;
+    padding: 0 35px;
+    &:hover {
+      background-color: $color_white;
+      color: $color_grey2;
+    }
+  }
+}
+.footer-bottom {
+  font-size: 12px;
+  padding: 20px 0 100px 0;
+  color: $color_grey;
+  &__link {
+    &:hover {
+      color: $color_white;
+      transition: 0.4s;
+    }
+  }
+  &__img {
+    margin-right: 20px;
+  }
+  &__icon {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+.icon4, .icon2, .icon1, .icon3{
+  background: url('../images/sprites.png') no-repeat;
+}
+.icon4{
+  background-position: -5px -18.00000762939453px ;
+  width: 39px;
+  height: 13px;
+  &:hover {
+    transition: 0.4;
+    background-position: -4px -70.00000762939453px ;
+    width: 39px;
+    height: 13px;
+  }
+}
+.icon2{
+  background-position: -101px -18.00000762939453px ;
+  width: 66px;
+  height: 12px;
+  &:hover {
+    background-position: -102px -69.00000762939453px ;
+    width: 66px;
+    height: 12px;
+  }
+}
+.icon1{
+  background-position: -218px -17.00000762939453px ;
+  width: 47px;
+  height: 14px;
+  &:hover {
+    background-position: -219px -69.00000762939453px ;
+    width: 47px;
+    height: 14px;
+  }
+}
+.icon3{
+  background-position: -323px -17.00000762939453px ;
+  width: 53px;
+  height: 16px;
+  &:hover {
+    background-position: -321px -67.00000762939453px ;
+    width: 53px;
+    height: 16px;
+  }
+}

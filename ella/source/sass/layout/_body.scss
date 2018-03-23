@@ -1,3 +1,6 @@
+body {
+  font-family: $mont;
+}
 ul,
 ol {
   margin: 0;
@@ -5,11 +8,17 @@ ol {
   list-style: none;
 }
 input,
-button {
+button,
+.btn,
+.form-control {
   &,
   &:focus {
     outline: 0;
+    box-shadow: 0 0 0 0;
   }
+}
+img {
+  width: 100%;
 }
 a {
   &,

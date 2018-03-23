@@ -4,6 +4,9 @@
 /// @requires $breakpoints
 ///
 $breakpoints: (
+  'mobileS-and-down': (max-width: 320px),
+  'mobileM-and-down': (max-width: 375px),
+  'mobileL-and-down': (max-width: 425px),
   'smallphone-and-down': (max-width: 575px),
   'phone-and-down': (max-width: 767px),
   'tablet-and-down': (max-width: 991px),
