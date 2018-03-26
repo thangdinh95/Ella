@@ -38,7 +38,6 @@
   &__dropdownmenu {
     min-width: 100%;
     font-size: 12px;
-    // transform: translate3d(0px, 36px, 0px);
   }
   @include respond-to ('smallphone-and-down') {
     display: flex;
@@ -421,10 +420,19 @@
     padding: 5px 0;
     position: relative;
     transition: 0.4s;
-    &:hover {
+    .navigation-hover__text {
       transition: 0.4s;
-      color: $color_grey;
-      padding-left: 20px;
+    }
+    &:hover {
+      .navigation-hover__text {
+        transition: 0.4s;
+        padding-left: 19px;
+        color: $color_grey;
+      }
+      .navigation-hover__line {
+        display: block;
+        transition: 0.4s;
+      }
     }
   }
   &__describe {
@@ -444,6 +452,16 @@
   }
   &__left {
     padding-left: 70px;
+  }
+  &__line {
+    display: none;
+    position: absolute;
+    z-index: 8000;
+    top: 13px;
+    left: 0;
+    height: 1px;
+    width: 15px;
+    background-color: $color_grey;
   }
 }
 .nav-mobile {
@@ -514,14 +532,13 @@
     font-size: 11px;
     font-weight: 700;
   }
-  &__img {
-
+  &__text {
+    font-size: 12px;
+    margin: 0;
   }
 }
 .navmobile-subtoggle {
   padding: 0 20px;
-  &__item {
-  }
   &__link {
     font-size: 11px;
   }

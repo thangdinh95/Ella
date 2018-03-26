@@ -1,4 +1,19 @@
 $(function() {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() == 0) {
+      $('#top').stop(false, true).fadeOut(600);
+    } else {
+      $('#top').stop(false, true).fadeIn(600);
+    }
+  });
+  $('#top').click(function(event) {
+    $('body').animate({scrollTop: 0},600);
+  });
+  if ($('body').scrollTop() == 0) {
+    $('#top').css("display", "none");
+  } else {
+    $('#top').css("display", "block");
+  }
   $('.js-mobile-menu').click(function(event) {
     $('.nav-mobile').toggleClass('show');
     $('.body-wrapper').toggleClass('show');

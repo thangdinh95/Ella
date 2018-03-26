@@ -46,6 +46,19 @@
 .col-100 {
   max-width: 100%;
 }
+#top {
+  width: 50px;
+  height: 50px;
+  background-color: $color_black;
+  color: $color_white;
+  font-size: 30px;
+  position: fixed;
+  top: 55%;
+  right: 16px;
+  z-index: 6000;
+  text-align: center;
+  cursor: pointer;
+}
 .body-wrapper {
   overflow: hidden;
 }
@@ -60,7 +73,6 @@
 .new-arrival {
   margin-bottom: 40px;
 }
-
 .banner-body {
   &__wrapper {
     position: relative;
