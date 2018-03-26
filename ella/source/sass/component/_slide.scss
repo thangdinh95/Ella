@@ -31,11 +31,14 @@
     left: 30%;
     top:50%;
     transform: translate(-50%, -50%);
+    @include respond-to ('tablet-and-down') {
+      left: 50%;
+    }
     @include respond-to ('smallphone-and-down') {
       transform: translate(-85%, -50%);
     }
-    @include respond-to ('tablet-and-down') {
-      left: 50%;
+    @include respond-to ('mobileM-and-down') {
+      transform: translate(-70%, -50%);
     }
   }
   &__title {

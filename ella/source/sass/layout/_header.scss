@@ -242,11 +242,20 @@
       left: -388px;
       width: 427px;
     }
+    @include respond-to ('mobileL-and-down') {
+      top: 45px;
+      // left: -388px;
+      width: 427px;
+      left: auto;
+      right: -40px;
+    }
     @include respond-to ('mobileM-and-down') {
-      left: -346px;
+      // left: -346px;
+      width: 385px;
     }
     @include respond-to ('mobileS-and-down') {
-      left: -300px;
+      // left: -300px;
+      width: 337px;
     }
   }
   .button-white__btn {
@@ -326,6 +335,8 @@
   flex-direction: row;
   &__item {
     padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     &:hover {
       .navigation-hover {
         display: block; //bat tat mega menu
@@ -337,6 +348,8 @@
     font-size: 13px;
     padding-right: 0;
     padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
     position: relative;
     &:hover {
       color: $color_white;
@@ -393,7 +406,7 @@
   width: 200%;
   right: -50%;
   left: -50%;
-  top: 43px;
+  top: 49px;
   padding: 20px;
   display: none; //bat tat megamenu
   &__title {
@@ -447,6 +460,7 @@
   display: none;
   &.show {
     transform: translateX(0);
+    overflow-y: auto;
   }
   @include respond-to ('smallphone-and-down') {
     display: block;
@@ -494,6 +508,7 @@
   &__item {
     border-bottom: 1px solid $color_grey;
     padding: 10px 0;
+    background: url('../images/plus-btn.png') no-repeat 96% 50%;
   }
   &__link {
     font-size: 11px;
@@ -514,4 +529,10 @@
 .bg-color-change {
   background-color: $color_black;
   color: $color_white;
+}
+.icon-rotate {
+  transform: rotate(180deg);
+}
+.icon-change {
+  background: url('../images/minus-btn.png') no-repeat 96% 50%;
 }

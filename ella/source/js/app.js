@@ -9,12 +9,47 @@ $(function() {
   });
   $('.navmobile-collection').slideUp();
   $('.js-collection').click(function(event) {
-    $(this).toggleClass('bg-color-change')
+    $(this).toggleClass('bg-color-change');
+    $(this).find('.navmobile-nav__icon').toggleClass('icon-rotate');
     $('.navmobile-collection').slideToggle();
   });
   $('.js-subtoggle').slideUp();
   $('.js-subtoggle-item').click(function(event) {
-    $(this).find('.js-subtoggle').slideToggle();
+    $(this).next().slideToggle();
+    $(this).toggleClass('icon-change')
+  });
+  $('.navmobile-shop').slideUp();
+  $('.js-shop').click(function(event) {
+    $(this).toggleClass('bg-color-change');
+    $(this).find('.navmobile-nav__icon').toggleClass('icon-rotate');
+    $('.navmobile-shop').slideToggle();
+  });
+  $('.js-subtoggle-shop').slideUp();
+  $('.js-subtoggle-item-shop').click(function(event) {
+    $(this).next().slideToggle();
+    $(this).toggleClass('icon-change')
+  });
+  $('.navmobile-lookbook').slideUp();
+  $('.js-lookbook').click(function(event) {
+    $(this).toggleClass('bg-color-change');
+    $(this).find('.navmobile-nav__icon').toggleClass('icon-rotate');
+    $('.navmobile-lookbook').slideToggle();
+  });
+  $('.js-subtoggle-lookbook').slideUp();
+  $('.js-subtoggle-item-lookbook').click(function(event) {
+    $(this).next().slideToggle();
+    $(this).toggleClass('icon-change')
+  });
+  $('.navmobile-blog').slideUp();
+  $('.js-blog').click(function(event) {
+    $(this).toggleClass('bg-color-change');
+    $(this).find('.navmobile-nav__icon').toggleClass('icon-rotate');
+    $('.navmobile-blog').slideToggle();
+  });
+  $('.js-subtoggle-blog').slideUp();
+  $('.js-subtoggle-item-blog').click(function(event) {
+    $(this).next().slideToggle();
+    $(this).toggleClass('icon-change')
   });
   $('.js-trending').owlCarousel({
     loop: true,

@@ -53,7 +53,12 @@
 }
 .footer-facebook {
   margin-top: -5px;
+  @include respond-to ('tablet-and-down') {
+    display: inline-block;
+    margin-top: 20px;
+  }
   @include respond-to ('smallphone-and-down') {
+    display: block;
     clear: both;
     padding-top: 30px;
   }
@@ -124,6 +129,9 @@
   &__icon {
     float: left;
     margin-right: 20px;
+    @include respond-to ('mobileM-and-down') {
+      margin-right: 13px;
+    }
   }
 }
 
