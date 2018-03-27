@@ -1,10 +1,15 @@
+.container-mobile-nav {
+  @include respond-to ('phone-and-down') {
+    max-width: none;
+  }
+}
 .header-top {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     flex-direction: row-reverse;
     justify-content: center;
     border-bottom: 1px solid $color_lightgrey2;
@@ -39,7 +44,7 @@
     min-width: 100%;
     font-size: 12px;
   }
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     display: flex;
     justify-content: space-around;
   }
@@ -70,7 +75,7 @@
 }
 .header-currency {
   &__dropdown {
-    @include respond-to ('smallphone-and-down') {
+    @include respond-to ('phone-and-down') {
     position: absolute;
     top: 0;
     left: 50%;
@@ -81,7 +86,7 @@
   &__dropdowntoggle {
     font-size: 12px;
     font-weight: 700;
-    @include respond-to ('smallphone-and-down') {
+    @include respond-to ('phone-and-down') {
       width: 100%;
       background-color: $color_black;
       color: white;
@@ -89,17 +94,17 @@
     }
   }
   &__dropdownmenu {
-    min-width: 50px;
+    min-width: 100%;
     border-radius: 0;
     font-size: 12px;
-    @include respond-to ('smallphone-and-down') {
-      min-width: 107px;
-    }
+    // @include respond-to ('phone-and-down') {
+    //   min-width: 107px;
+    // }
   }
 }
 .header-search {
   width: 178px;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
      display: none;
   }
   &__form {
@@ -126,18 +131,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     flex-direction: column;
     margin-top: 20px;
   }
 }
 .header-logo {
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     text-align: center;
   }
   &__img {
     margin-top: 23px;
-    @include respond-to ('smallphone-and-down') {
+    @include respond-to ('phone-and-down') {
       margin-top: 0;
       width: auto;
     }
@@ -145,7 +150,7 @@
 }
 .header-attributes {
   margin-bottom: 20px;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     margin: 0;
   }
 }
@@ -154,7 +159,7 @@
   font-weight: 700;
   margin: 20px 0;
   text-align: right;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     text-align: center;
   }
 }
@@ -173,7 +178,7 @@
       display: block;
     }
   }
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     position: absolute;
     width: 25%;
     text-align: center;
@@ -186,7 +191,7 @@
   &__icon {
     font-size: 14px;
     margin-right: 10px;
-    @include respond-to ('smallphone-and-down') {
+    @include respond-to ('phone-and-down') {
       font-size: 20px;
     }
   }
@@ -200,7 +205,7 @@
       border-bottom: 1px solid $color_black;
     }
     &--hidden {
-      @include respond-to ('smallphone-and-down') {
+      @include respond-to ('phone-and-down') {
         display: none;
       }
     }
@@ -214,7 +219,7 @@
     margin-left: 10px;
     text-align: center;
     line-height: 22px;
-    @include respond-to ('smallphone-and-down') {
+    @include respond-to ('phone-and-down') {
       position: absolute;
       width: 20px;
       height: 20px;
@@ -233,28 +238,15 @@
     background-color: $color_white;
     color: $color_black;
     padding: 20px;
-    top: 63px;
-    left: 1px;
+    top: 42px;
+    left: 15px;
     animation: down 0.2s forwards;
-    @include respond-to ('smallphone-and-down') {
-      top: 45px;
-      left: -388px;
-      width: 427px;
-    }
-    @include respond-to ('mobileL-and-down') {
-      top: 45px;
-      // left: -388px;
-      width: 427px;
+    @include respond-to ('phone-and-down') {
+      top: 38px;
       left: auto;
-      right: -40px;
-    }
-    @include respond-to ('mobileM-and-down') {
-      // left: -346px;
-      width: 385px;
-    }
-    @include respond-to ('mobileS-and-down') {
-      // left: -300px;
-      width: 337px;
+      right: 2px;
+      min-width: 400%;
+      text-align: left;
     }
   }
   .button-white__btn {
@@ -286,7 +278,7 @@
 }
 .header-wishlist {
   margin-left: 30px;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     display: none;
   }
   &__icon {
@@ -301,7 +293,7 @@
 }
 .header-signin {
   margin-left: 30px;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     display: none;
   }
   &__link {
@@ -312,7 +304,7 @@
 }
 .header-search-mobile {
   display: none;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     display: block;
   }
   &__form {
@@ -326,7 +318,7 @@
 .navigation {
   background-color: $color_black;
   padding: 0;
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     display: none;
   }
 }
@@ -480,7 +472,7 @@
     transform: translateX(0);
     overflow-y: auto;
   }
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     display: block;
   }
 }
@@ -506,7 +498,7 @@
   }
 }
 .body-wrapper {
-  @include respond-to ('smallphone-and-down') {
+  @include respond-to ('phone-and-down') {
     z-index: 1;
     -webkit-box-shadow: 0px -1px 12px 0px rgba(50, 50, 50, 0.37);
     -moz-box-shadow:    0px -1px 12px 0px rgba(50, 50, 50, 0.37);

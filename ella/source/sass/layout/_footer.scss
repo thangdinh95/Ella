@@ -54,6 +54,10 @@
     display: inline-block;
     margin-top: 20px;
   }
+  @include respond-to ('phone-and-down') {
+    display: block;
+    margin-top: 20px;
+  }
   @include respond-to ('smallphone-and-down') {
     display: block;
     clear: both;
@@ -114,6 +118,9 @@
   font-size: 12px;
   padding: 20px 0 100px 0;
   color: $color_grey;
+  @include respond-to ('smallphone-and-down') {
+    padding: 20px 0 20px 0;
+  }
   &__link {
     &:hover {
       color: $color_white;
