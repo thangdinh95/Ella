@@ -2,7 +2,7 @@ mixin banner-home(title, img, state)
   .banner-home
     a(href="#!")
       .banner-home__wrapper
-        img(src="images/"+img+".jpg").banner-home__img
+        img(src="images/"+img+".jpg", alt="pic").banner-home__img
         .banner-home__layer
         p.banner-home__text(class="banner-home__text--"+state)
           | #{title}
