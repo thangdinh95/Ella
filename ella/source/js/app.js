@@ -5,15 +5,17 @@ $(function() {
     } else {
       $('#top').stop(false, true).fadeIn(600);
     }
+    if (!window.homePosition) window.homePosition = $('.navigation').offset().top;
+    var currentOffsetPosition = $(window).scrollTop();
+    if (currentOffsetPosition > window.homePosition) {
+    $('.navigation').addClass('sticky-nav');
+    } else {
+    $('.navigation').removeClass('sticky-nav');
+    }
   });
   $('#top').click(function(event) {
-    $('body').animate({scrollTop: 0},600);
+    $('html').animate({scrollTop: 0},600);
   });
-  if ($('body').scrollTop() == 0) {
-    $('#top').css("display", "none");
-  } else {
-    $('#top').css("display", "block");
-  }
   $('.js-mobile-menu').click(function(event) {
     $('.nav-mobile').toggleClass('show');
     $('.body-wrapper').toggleClass('show');

@@ -4,5 +4,5 @@ mixin banner-home(title, img, state)
       .banner-home__wrapper
         img(src="images/"+img+".jpg").banner-home__img
         .banner-home__layer
-        .banner-home__text(class="banner-home__text--"+state)
+        p.banner-home__text(class="banner-home__text--"+state)
           | #{title}
